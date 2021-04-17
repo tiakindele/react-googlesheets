@@ -4,4 +4,7 @@
 
 .container {
   padding: 20px;
+  height: 100vh;
+  display: grid !important;
+  place-items: center;
 }
