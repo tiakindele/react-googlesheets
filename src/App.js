@@ -10,6 +10,7 @@ export default class App extends Component {
     this.state = {
       name: '',
       email: '',
+      password: '',
       location: ''
     }
   }
@@ -29,18 +30,22 @@ export default class App extends Component {
   }
 
   render() {
-    const { name, email, location } = this.state;
+    const { name, email, password, location } = this.state;
     return (
       <Container fluid className="container">
-        <Header as='h2'>React Google Sheets!</Header>
         <Form className="form" onSubmit={this.submitHandler}>
+          <Header as='h1'>Leftovers Sign Up</Header>
           <Form.Field>
-            <label>Name</label>
+            <label>Company Name</label>
             <input placeholder='Enter your name' type="text" name = "name" value = {name} onChange={this.changeHandler}/>
           </Form.Field>
           <Form.Field>
-            <label>Email</label>
+            <label>Company Email</label>
             <input placeholder='Enter your email' type="email" name = "email" value = {email} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Password</label>
+            <input placeholder='Enter your password' type="password" name = "password" value = {password} onChange={this.changeHandler}/>
           </Form.Field>
           <Form.Field>
             <label>Location</label>
