@@ -27,6 +27,13 @@ export default class App extends Component {
     .then(response => {
       console.log(response);
     })
+
+    this.setState({
+      name: '',
+      email: '',
+      password: '',
+      location: ''
+    });
   }
 
   render() {
