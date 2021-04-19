@@ -2,7 +2,7 @@
 
 ## Links
 
-https://leftovers-signup.netlify.app/
+https://google-sheets-signup.netlify.app/
 
 ## Available Scripts
 
