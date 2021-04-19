@@ -12,7 +12,8 @@ export default class App extends Component {
       email: '',
       password: '',
       location: '',
-      showForm: false
+      showForm: false,
+      formSubmitted: false
     }
   }
 
@@ -27,7 +28,6 @@ export default class App extends Component {
   submitHandler = e => {
     e.preventDefault();
     const { showForm, ...formValues } = this.state
-    console.log(formValues);
 
     axios.post('https://sheet.best/api/sheets/4dcb546c-efb2-4925-88b7-c543af060fa1', formValues)
     .then(response => {
@@ -39,16 +39,26 @@ export default class App extends Component {
       email: '',
       password: '',
       location: '',
-      showForm: false
+      showForm: false,
+      formSubmitted: true
     });
   }
 
   render() {
-    const { name, email, password, location, showForm } = this.state;
+    const { name, email, password, location, showForm, formSubmitted } = this.state;
     return (
       <Container fluid className="container">
         <Form className="form" onSubmit={this.submitHandler}>
           <Header as='h1'>Leftovers Sign Up</Header>
+
+          {!showForm && formSubmitted && (
+            <div className="ui message">
+              <div className="header">
+                You are signed up!
+              </div>
+              <p>Welcome to the Leftovers Foundation. Check your email for confirmation!</p>
+            </div>
+          )}
 
           {!showForm && (
             <div className="signup-button">
