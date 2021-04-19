@@ -2,7 +2,8 @@
 
 ## Links
 
-https://google-sheets-signup.netlify.app/
+Web Application: https://google-sheets-signup.netlify.app/
+Google Sheets: https://docs.google.com/spreadsheets/d/1HJabLGgK4CrBv0HacMOx9Foo3Ge7M2TKNlZmrGa3Lm0/edit#gid=0
 
 ## Available Scripts
 
