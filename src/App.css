@@ -8,3 +8,7 @@
   display: grid !important;
   place-items: center;
 }
+
+.signup-button {
+  padding: 10px 0px;
+}
